@@ -1,0 +1,89 @@
+#hero {
+  height: 500px;
+  background-image: url("../media/builds_hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #131b23;
+  color: #e9f1f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 60pt;
+}
+
+main {
+  padding-top: 30px;
+}
+
+.card-text img {
+  height: 30px;
+  flex: 1 1 30px;
+}
+
+.card-text div {
+  line-height: 30px;
+  flex: 6 6 180px;
+}
+
+.card-text {
+  display: flex;
+}
+
+.price {
+  font-size: 1.3em;
+  color: #2274a5;
+}
+
+.more-guides a {
+  line-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-img {
+  min-width: 100%;
+  min-height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.spec {
+  padding-left: 0;
+}
+
+.card {
+  transition-duration: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 48pt;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-img {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 36pt;
+  }
+}

@@ -1,0 +1,36 @@
+#hero {
+  height: 300px;
+  background-color: #2274a5;
+  color: #e9f1f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 60pt;
+}
+
+main {
+  padding-top: 30px;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 48pt;
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 36pt;
+  }
+}

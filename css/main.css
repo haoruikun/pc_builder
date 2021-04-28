@@ -1,0 +1,13 @@
+body {
+    background-color: #E9F1F7;
+}
+
+footer {
+    height: 60px;
+    line-height: 60px;
+    background-color: #2274A5;
+}
+
+footer a {
+    text-decoration: none;;
+}

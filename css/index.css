@@ -1,0 +1,103 @@
+#hero {
+    height: 500px;
+    background-image: url("../media/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: #131B23;
+    color: #E9F1F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 60pt;
+}
+
+.hero-container a {
+    transition-duration: 0.6s;
+    border: 0;
+}
+
+.feature-icon {
+    font-size: 100px;
+    height: 150px;
+}
+
+#features-container {
+    background-color: #2274A5;
+    color: #E9F1F7;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.hero-container a:hover {
+    color: #E9F1F7;
+    background-color: #2274A5;
+    transform: scale(1.05);
+    animation: scale 0.6s ease-out;
+}
+
+main {
+    padding-top: 30px;
+}
+
+.card-text img {
+    height: 30px;
+    flex: 1 1 30px;
+}
+
+.card-text div {
+    line-height: 30px;
+    flex: 5 5 150px;
+}
+
+.card-text {
+    display: flex;
+}
+
+.price {
+    font-size: 1.3em;
+    color: #2274A5;
+}
+
+.more-guides a {
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    transition-duration: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+/* responsive */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 48pt;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 36pt;
+    }
+}

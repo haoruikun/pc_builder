@@ -1,0 +1,22 @@
+#hero {
+  height: 100vh;
+  color: #e9f1f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button-group {
+  flex-basis: 100%;
+}
+
+.hero-container {
+  text-align: center;
+}
+
+main {
+  padding-top: 30px;
+}
+
+/* responsive */

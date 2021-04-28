@@ -87,21 +87,21 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <?php if ($currentPage == 'home') :?>
+          <?php if (isset($currentPage) && $currentPage == 'home') :?>
             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           <?php else : ?>
             <a class="nav-link" href="index.php">Home</a>
           <?php endif;?>
         </li>
         <li class="nav-item">
-          <?php if ($currentPage == 'builds') :?>
+          <?php if (isset($currentPage) && $currentPage == 'builds') :?>
             <a class="nav-link active" aria-current="page" href="index.php">Builds</a>
           <?php else : ?>
             <a class="nav-link" href="builds.php">Builds</a>
           <?php endif;?>
         </li>
         <li class="nav-item dropdown">
-          <?php if ($currentPage == 'parts') :?>
+          <?php if (isset($currentPage) && $currentPage == 'parts') :?>
             <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               PC Parts
             </a>
@@ -122,14 +122,14 @@
           </ul>
         </li>
         <li class="nav-item">
-          <?php if ($currentPage == 'builder') :?>
+          <?php if (isset($currentPage) && $currentPage == 'builder') :?>
             <a class="nav-link active" aria-current="page" href="builder.php"><i class="fas fa-wrench"></i> Builder</a>
           <?php else : ?>
             <a class="nav-link" href="builder.php"><i class="fas fa-wrench"></i> Builder</a>
           <?php endif;?>
         </li>
         <li class="nav-item">
-          <?php if ($currentPage == 'addParts') :?>
+          <?php if (isset($currentPage) && $currentPage == 'addParts') :?>
             <a class="nav-link active" aria-current="page" href="builder.php"><i class="fas fa-plus"></i> Add Parts</a>
           <?php else : ?>
             <a class="nav-link" href="addParts.php"><i class="fas fa-plus"></i> Add Parts</a>
@@ -139,7 +139,7 @@
       <?php if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) :?>
         <!-- Sign Out and Profile -->
         <div class="d-grid d-md-block">
-          <?php if ($currentPage == '/profile.php') :?>
+          <?php if (isset($currentPage) && $currentPage == 'profile') :?>
             <a aria-current="page" href="profile.php" class="btn btn-success">
               <?php echo $_SESSION['username'];?> <i class="fas fa-user-circle"></i>
             </a>
@@ -174,7 +174,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <form action="<?php echo basename($_SERVER['REQUEST_URI']); ?>" method="POST">
           <div class="mb-3">
             <label for="loginUsername" class="form-label">Username</label>
             <input type="text" class="form-control" id="loginUsername" name="loginUsername">

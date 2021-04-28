@@ -1,6 +1,10 @@
 <footer class="container-fluid
     <?php 
-        $display = $currentPage == 'confirmation' ? 'fixed-bottom' : ''; 
+        if ($currentPage == 'builder' && (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) ) {
+            $display = 'fixed-bottom';
+        } else {
+            $display = $currentPage == 'confirmation' ? 'fixed-bottom' : '';
+        }
         echo $display . ' ';
         if ($footerColor == 'green') {
             echo 'bg-success';

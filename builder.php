@@ -3,7 +3,7 @@
     $currentPage = 'builder';
 
     //enter edit mode 
-    if ($_GET['edit'] == '1') {
+    if (isset($_GET['edit']) && $_GET['edit'] == '1') {
         $_SESSION['edit'] = '1';
         // echo "if statement triggered <br>";
     }
@@ -23,7 +23,7 @@
     <section id="hero">
         <div class="hero-container">
             <h1 class="mb-3">
-                <?php if ($_SESSION['edit'] == 1) {
+                <?php if (isset($_SESSION['edit']) && $_SESSION['edit'] == 1) {
                     echo 'Edit Build';
                 } else {
                     echo 'PC Builder';
@@ -175,7 +175,7 @@
                     <h5 class="mx-2 mb-0">
                         Total: <span class="text-success">549.00</span>
                     </h5>
-                    <?php if ($_SESSION['edit'] == 1) :?>
+                    <?php if (isset($_SESSION['edit']) && $_SESSION['edit'] == 1) :?>
                         <a href="editBuildConfirmation.php" class="btn btn-success btn-lg">
                             Confirm Edit
                         </a>

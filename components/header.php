@@ -31,7 +31,6 @@
 
     // echo "$sql_login";
     $results_login = $mysqli->query($sql_login);
-    $row_login = $results_login->fetch_assoc();
 
     // var_dump($results_login);
     if (!$results_login) {
@@ -40,6 +39,8 @@
       exit();
     }
     $mysqli->close();
+
+    $row_login = $results_login->fetch_assoc();
 
     if ( $results_login->num_rows == 1 ) {
       // Valid credentials.

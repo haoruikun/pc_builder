@@ -108,7 +108,7 @@
                     </div>
                   </div>
                   <p class="card-text price">
-                    <?php echo $row['price'];?>
+                    $<?php echo $row['price'];?>
                   </p>
                   <div class="d-grid">
                     <a href="detail.php?id=<?php echo $row['id'];?>" class="btn btn-primary stretched-link">View Guide</a>
@@ -149,7 +149,7 @@
                       <div>
                         <small class="text-muted">Created by <?php echo $row['username'];?></small>
                         <p class="card-text price text-end mb-0">
-                          <?php echo $row['price'];?>
+                          $<?php echo $row['price'];?>
                         </p>
                       </div>
                     </div> <!--card-body-->

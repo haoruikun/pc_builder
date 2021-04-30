@@ -19,6 +19,10 @@ main {
   padding-top: 30px;
 }
 
+.no-login {
+  padding: 100px 0px 150px 0px;
+}
+
 /* responsive */
 @media (max-width: 992px) {
   h1 {

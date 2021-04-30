@@ -100,13 +100,13 @@
                         <td><?php echo $row['spec'];?></td>
                         <td>
                             <a target="_blank" href="<?php echo $row['url'];?>">
-                                <?php echo $row['price'];?>
+                                $<?php echo $row['price'];?>
                             </a>
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="builder.php?part_id=<?php echo $row['id']?>&id=<?php echo $_GET['id']?>" class="btn btn-success">Add</a>
-                                <?php if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] == '1') : ?>
+                                <?php if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) : ?>
                                     <a href="partEdit.php?part_id=1&id=<?php echo $_GET['id']?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                     <a href="partDeleteConfirmation.php?part_id=1&id=<?php echo $_GET['id']?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                 <?php endif;?>

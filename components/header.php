@@ -4,6 +4,9 @@
   echo "<hr>";
   echo "session:";
   var_dump($_SESSION);
+  echo "<hr>";
+  echo "files:";
+  var_dump($_FILES);
   if (isset($_POST['loggedIn']) && $_POST['loggedIn'] == 'true') {
     // echo "<hr> login if success";
     $_SESSION['loggedIn'] = true;

@@ -1,6 +1,6 @@
 <footer class="container-fluid
     <?php 
-        if ($currentPage == 'builder' && (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) ) {
+        if (($currentPage == 'builder' || $currentPage == 'addParts') && (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) ) {
             $display = 'fixed-bottom';
         } else {
             $display = $currentPage == 'confirmation' ? 'fixed-bottom' : '';

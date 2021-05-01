@@ -87,6 +87,7 @@
                         exit();
                     } else {
                         move_uploaded_file($_FILES['img']['tmp_name'], $destination);
+                        unlink($_POST['current_img']);
                     }
                     
                 } else {
@@ -111,6 +112,7 @@
                     exit();
                     } else {
                         move_uploaded_file($_FILES['img']['tmp_name'], $destination);
+                        unlink($_POST['current_img']);
                     }
                 }
                 $mysqli->close();

@@ -35,8 +35,21 @@
 
         $part_id = $_GET['part_id'];
 
+        $sql_get = "SELECT * FROM " . $part_table . "
+        WHERE id = $part_id;";
+
         $sql_delete = "DELETE FROM " . $part_table . "
              WHERE id = $part_id;";
+
+        $results_get = $mysqli->query($sql_get);
+
+        if (!$results_get) {
+            echo $mysqli->error;
+            $mysqli->close();
+            exit();
+        }
+
+        $row = $results_get->fetch_assoc();
 
         $results_delete = $mysqli->query($sql_delete);
         if (!$results_delete) {
@@ -48,6 +61,8 @@
                 $mysqli->close();
                 exit();
             }
+        } else {
+            unlink($row['img']); 
         }
 
         $mysqli->close();

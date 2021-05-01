@@ -48,10 +48,15 @@
   <body>
     <?php require 'components/header.php'?>
     <section id="hero" class="mb-5">
+      <video id="videoBG" poster="media/hero.jpg" autoplay muted loop>
+        <source src="media/feature.mp4" type="video/mp4">
+      </video>
+      <div id="bg-color"></div>
       <div class="hero-container">
         <h1 class="mb-3">Build Your Dream PC</h1>
         <a href="builder.php" class="btn btn-light btn-lg">Start Building</a>
       </div>
+      <small class="p-1"><a href="https://www.youtube.com/watch?v=foFGDU7KoqQ&ab_channel=DesignsByIFR" target="_blank">Video by Design By IFR</a></small>
     </section>
     <div class="container-fluid" id="features-container">
       <section id="features" class="container">

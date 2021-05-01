@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+.no-login {
+  padding: 100px 0px 150px 0px;
+}
+
 h1 {
   font-size: 60pt;
 }

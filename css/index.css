@@ -1,9 +1,5 @@
 #hero {
     height: 500px;
-    background-image: url("../media/hero.jpg");
-    background-position: center;
-    background-size: cover;
-    background-color: #131B23;
     color: #E9F1F7;
     display: flex;
     justify-content: center;
@@ -12,6 +8,38 @@
 
 .hero-container {
     text-align: center;
+}
+
+#hero {
+    position: relative;
+    overflow: hidden;
+}
+
+#hero small {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 6pt;
+}
+
+#hero small a {
+    color: white;
+    text-decoration: none;
+}
+
+#videoBG {
+    position: absolute;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#bg-color {
+    position: absolute;
+    background-color: #131B23;
+    z-index: -2;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 h1 {

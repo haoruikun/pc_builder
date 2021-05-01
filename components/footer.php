@@ -2,6 +2,8 @@
     <?php 
         if (($currentPage == 'builder' || $currentPage == 'addParts') && (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] != true) ) {
             $display = 'fixed-bottom';
+        } else if ($currentPage == 'profile' && $num_rows == 0) {
+            $display = 'fixed-bottom';
         } else {
             $display = $currentPage == 'confirmation' ? 'fixed-bottom' : '';
         }

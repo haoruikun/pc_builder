@@ -10,7 +10,7 @@
   if (isset($_POST['loggedIn']) && $_POST['loggedIn'] == 'true') {
     // echo "<hr> login if success";
     $_SESSION['loggedIn'] = true;
-    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['username'] = trim($_POST['username']);
     $_SESSION['isAdmin'] = $_POST['isAdmin'];
   }
   if ( isset($_POST['loginUsername']) && isset($_POST['loginPassword']) ) {
@@ -63,6 +63,7 @@
   }
   if (isset($_POST['signOut']) && $_POST['signOut'] == 'true') {
     // echo "<hr> sign out if success";
+    session_destroy();
     $_SESSION['loggedIn'] = false;
     $_SESSION['username'] = '';
     $_SESSION['isAdmin'] = '';

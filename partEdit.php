@@ -32,9 +32,7 @@
     
     // echo "$sql_login";
     $results_part = $mysqli->query($sql_part);
-    var_dump($results_part);
     
-
     // var_dump($results_login);
     if (!$results_part) {
     echo $mysqli->error;

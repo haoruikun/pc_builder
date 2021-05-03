@@ -127,7 +127,7 @@
             <div class="col-lg-6">
               <div class="card mb-3">
                 <a href="detail.php?id=<?php echo $row['id']?>" class="stretched-link"></a>
-                <div class="row g-0">
+                <div class="row g-0 user-card">
                   <div class="col-md-5">
                     <div class="feature-img"
                     style="background-image: url('<?php echo $row['build_img'];?>');">

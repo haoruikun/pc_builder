@@ -65,7 +65,7 @@
     <main class="container">
         <?php if ($num_rows == 0) :?>
           <div class='text-center no-login'>
-            <i class="fas fa-sign-in-alt fa-10x"></i>
+            <i class="fas fa-wrench fa-10x"></i>
             <h2 class='my-3'>You don't have any builds yet.</h2>
             <a href="builder.php" class="btn btn-primary btn-lg">
               Start Building

@@ -14,12 +14,20 @@
   text-align: center;
 }
 
+.user-card {
+  height: 220px;
+}
+
 h1 {
   font-size: 60pt;
 }
 
 main {
   padding-top: 30px;
+}
+
+.card {
+  overflow: hidden;
 }
 
 .card-text img {
@@ -73,6 +81,10 @@ main {
 @media (max-width: 992px) {
   h1 {
     font-size: 48pt;
+  }
+
+  .user-card {
+    height: auto;
   }
 }
 

@@ -49,8 +49,6 @@
                         (name, spec, img, url, price)
                         VALUES ('$name', '$spec', '$destination', '$url', '$price');";
 
-            echo $sql_add;
-
             // echo "$sql_login";
             $results_add = $mysqli->query($sql_add);
 

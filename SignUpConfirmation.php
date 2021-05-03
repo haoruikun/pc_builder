@@ -14,8 +14,8 @@
             exit();
         }
 
-        $username = $_POST['signUpUsername'];
-        $password = $_POST['signUpPassword'];
+        $username = trim($_POST['signUpUsername']);
+        $password = trim($_POST['signUpPassword']);
         $password = hash(PASS_HASH, $password);
 
         $username = $mysqli->escape_string($username);

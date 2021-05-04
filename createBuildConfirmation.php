@@ -44,11 +44,9 @@
 
         $row_user = $results_user->fetch_assoc();
         $user_id = $row_user['id'];
-        echo $user_id;
 
         $sql_add = "INSERT INTO builds (cpu_id, cooler_id, motherboard_id, memory_id, storage_id, video_id, power_id, case_id, build_name, build_img, user_id)
         VALUES($cpu_id, $cooler_id, $motherboard_id, $memory_id, $storage_id, $video_id, $power_id, $case_id, '$build_name', '$destination', $user_id);";
-        echo $sql_add;
 
         $results_add = $mysqli->query($sql_add);
 
@@ -59,15 +57,7 @@
         } else {
               move_uploaded_file($_FILES['build_img']['tmp_name'], $destination);
         }
-
-        $sql_get_row = "SELECT id FROM builds;";
-        $results_row = $mysqli->query($sql_get_row);
-        if (!$results_row) {
-          echo $mysqli->error;
-          $mysqli->close();
-          exit();
-        }
-        $num_rows = $results_row->num_rows;
+        $num_rows = $mysqli->insert_id;
         
         $mysqli->close();
 

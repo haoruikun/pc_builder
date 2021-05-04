@@ -10,41 +10,49 @@
     $id = $_GET['id'];
 
     $sql_build = "SELECT builds.id, build_name, build_img, username,
+        cpus.id AS cpu_id,
         cpus.name AS cpu, 
         cpus.spec AS cpu_spec, 
         cpus.img AS cpu_img, 
         cpus.price AS cpu_price, 
         cpus.url AS cpu_url, 
+        video.id AS video_id,
         video.name AS video, 
         video.spec AS video_spec, 
         video.img AS video_img, 
         video.price AS video_price, 
         video.url AS video_url, 
+        coolers.id AS cooler_id,
         coolers.name AS cooler, 
         coolers.spec AS cooler_spec, 
         coolers.img AS cooler_img, 
         coolers.price AS cooler_price, 
         coolers.url AS cooler_url, 
+        motherboards.id AS motherboard_id,
         motherboards.name AS motherboard, 
         motherboards.spec AS motherboard_spec, 
         motherboards.img AS motherboard_img, 
         motherboards.price AS motherboard_price, 
         motherboards.url AS motherboard_url, 
+        memories.id AS memory_id,
         memories.name AS memory, 
         memories.spec AS memory_spec, 
         memories.img AS memory_img, 
         memories.price AS memory_price, 
         memories.url AS memory_url, 
+        storages.id AS storage_id,
         storages.name AS storage, 
         storages.spec AS storage_spec, 
         storages.img AS storage_img, 
         storages.price AS storage_price, 
         storages.url AS storage_url, 
+        powers.id AS power_id,
         powers.name AS power, 
         powers.spec AS power_spec, 
         powers.img AS power_img, 
         powers.price AS power_price, 
         powers.url AS power_url, 
+        cases.id AS case_id,
         cases.name AS case_name, 
         cases.spec AS case_spec, 
         cases.img AS case_img, 
@@ -108,10 +116,15 @@
             } else {
                 echo $row['username'];
             }?></h5>
-        <div class="btn-group">
-            <a class="btn btn-outline-light" href="builder.php?edit=1&id=1"><i class="fas fa-edit"></i> Edit</a>
-            <a class="btn btn-outline-light" href="deleteBuildConfirmation.php"><i class="fas fa-trash-alt"></i> Delete</a>
-        </div>
+        <?php if ($_SESSION['username'] == $row['username']) :?>
+            <div class="btn-group">
+                <a class="btn btn-outline-light" href="builder.php?edit=1&id=<?php echo $id;?>"><i class="fas fa-edit"></i> Edit</a>
+                <button form="delete" type="submit" class="btn btn-outline-light" onclick="return confirm('Are you sure to delete?')" ><i class="fas fa-trash-alt"></i> Delete</button>
+            </div>
+            <form action="deleteBuildConfirmation.php" method="POST" id="delete">
+                <input type="hidden" name="id" value="<?php echo $id;?>">
+            </form>
+        <?php endif;?>
       </div>
     </section>
     <main class="container">

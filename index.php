@@ -1,5 +1,5 @@
-<?php require 'config.php'?>
 <?php 
+  require 'config/config.php';  
   $currentPage = 'home';
   $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     if ($mysqli->connect_errno) {
@@ -108,13 +108,13 @@
                   <div class="card-text mb-3">
                     <img src="media/cpu.svg" alt="CPU"> 
                     <div>
-                      <?php echo $row['cpu'];?>&nbsp<?php echo $row['cpu_spec'];?>
+                      <?php echo $row['cpu'];?>&nbsp;<?php echo $row['cpu_spec'];?>
                     </div>
                   </div>
                   <div class="card-text mb-3">
                     <img src="media/graphics-card.svg" alt="CPU"> 
                     <div>
-                    <?php echo $row['gpu'];?>&nbsp<?php echo $row['gpu_spec'];?>
+                    <?php echo $row['gpu'];?>&nbsp;<?php echo $row['gpu_spec'];?>
                     </div>
                   </div>
                   <p class="card-text price">

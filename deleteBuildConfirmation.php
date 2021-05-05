@@ -1,5 +1,5 @@
 <?php 
-    require 'config.php';
+    require 'config/config.php';
     $currentPage = 'confirmation';
 
     if ( isset($_POST['id']) && $_POST['id'] != '' ){

@@ -1,5 +1,5 @@
 <?php 
-    require 'config.php';
+    require 'config/config.php';
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     if ($mysqli->connect_errno) {
     echo $mysqli->connec_error;
@@ -105,7 +105,10 @@
           </div>
           <div class="mb-3" id="price_group">
             <label for="price" class="form-label">Price</label>
-            <input class="form-control"  step="0.01" type="number" id="price" name="price" value="<?php echo $row['price'];?>">
+            <div class="input-group">
+              <span class="input-group-text">USD $</span>
+              <input class="form-control"  step="0.01" type="number" id="price" name="price" placeholder='Example: 329.00' value="<?php echo $row['price'];?>">
+            </div>
             <small class="form-text text-danger" id="price-err"></small>
             <small class="form-text d-block">
                 Please keep the first two digits after the decimal point. Example: 666.00

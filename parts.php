@@ -1,5 +1,5 @@
 <?php 
-  require 'config.php';
+  require 'config/config.php';
   $currentPage = 'parts';
   if ( !isset($_GET['part']) 
         || ($_GET['part'] != 'CPU'

@@ -1,5 +1,5 @@
 <?php 
-    require 'config.php'; // The config.php has session_start();
+    require 'config/config.php';
     $currentPage = 'builder';
 
     //enter edit mode 
@@ -770,11 +770,11 @@
                                     && isset($_SESSION['video_id']) && $_SESSION['video_id'] != ''
                                     && isset($_SESSION['power_id']) && $_SESSION['power_id'] != ''
                                     && isset($_SESSION['case_id']) && $_SESSION['case_id'] != ''):?>
-                                <button href="createBuildConfirmation.php" class="btn btn-success btn-lg" type="submit">
+                                <button class="btn btn-success btn-lg" type="submit">
                                     Create Build
                                 </button>
                             <?php else:?>
-                                <button href="createBuildConfirmation.php" class="btn btn-success btn-lg" disabled>
+                                <button class="btn btn-success btn-lg" disabled>
                                     Create Build
                                 </button>
                             <?php endif;?>

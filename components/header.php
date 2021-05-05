@@ -1,12 +1,12 @@
 <?php
-  echo "post:";
-  var_dump($_POST);
-  echo "<hr>";
-  echo "session:";
-  var_dump($_SESSION);
-  echo "<hr>";
-  echo "files:";
-  var_dump($_FILES);
+  // echo "post:";
+  // var_dump($_POST);
+  // echo "<hr>";
+  // echo "session:";
+  // var_dump($_SESSION);
+  // echo "<hr>";
+  // echo "files:";
+  // var_dump($_FILES);
   if (isset($_POST['loggedIn']) && $_POST['loggedIn'] == 'true') {
     // echo "<hr> login if success";
     $_SESSION['loggedIn'] = true;
@@ -84,7 +84,7 @@
 ">
   <nav class="container navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="index.php">
-      <img src="media/logo.svg" alt="PC Builder" height="50">
+      <img src="media/logo.png" alt="PC Builder" height="50">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

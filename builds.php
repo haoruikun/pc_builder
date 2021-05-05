@@ -1,4 +1,4 @@
-<?php require 'config.php'?>
+<?php require 'config/config.php';?>
 <?php 
   $currentPage = 'builds';
   $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -98,13 +98,13 @@
                   <div class="card-text mb-3">
                     <img src="media/cpu.svg" alt="CPU"> 
                     <div>
-                      <?php echo $row['cpu'];?>&nbsp<?php echo $row['cpu_spec'];?>
+                      <?php echo $row['cpu'];?>&nbsp;<?php echo $row['cpu_spec'];?>
                     </div>
                   </div>
                   <div class="card-text mb-3">
                     <img src="media/graphics-card.svg" alt="CPU"> 
                     <div>
-                    <?php echo $row['gpu'];?>&nbsp<?php echo $row['gpu_spec'];?>
+                    <?php echo $row['gpu'];?>&nbsp;<?php echo $row['gpu_spec'];?>
                     </div>
                   </div>
                   <p class="card-text price">
@@ -139,11 +139,11 @@
                       <ul class="spec mb-0">
                         <li class="card-text">
                           <img src="media/cpu.svg" alt="CPU"> 
-                          <div>&nbsp<?php echo $row['cpu'];?></div>
+                          <div>&nbsp;<?php echo $row['cpu'];?></div>
                         </li>
                         <li class="card-text">
                           <img src="media/graphics-card.svg" alt="GPU"> 
-                          <div>&nbsp<?php echo $row['gpu'];?></div>
+                          <div>&nbsp;<?php echo $row['gpu'];?></div>
                         </li>
                       </ul>
                       <div>

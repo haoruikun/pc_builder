@@ -1,5 +1,5 @@
 <?php 
-    require 'config.php';
+    require 'config/config.php';
     $currentPage = 'addParts';
 ?>
 <!doctype html>
@@ -108,7 +108,10 @@
             </div>
             <div class="mb-3" id="price_group">
               <label for="price" class="form-label">Price</label>
-              <input class="form-control"  step="0.01" type="number" id="price" name="price" placeholder='Example: 329.00'>
+              <div class="input-group">
+                <span class="input-group-text">USD $</span>
+                <input class="form-control"  step="0.01" type="number" id="price" name="price" placeholder='Example: 329.00'>
+              </div>
               <small class="form-text text-danger" id="price-err"></small>
               <small class="form-text d-block">
                   Please keep the first two digits after the decimal point. Example: 666.00

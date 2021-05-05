@@ -1,5 +1,5 @@
 <?php 
-    require 'config.php';
+    require 'config/config.php';
     $currentPage = 'confirmation';
     
     if ( isset($_POST['part']) && isset($_POST['part']) != ''
@@ -27,7 +27,7 @@
             } elseif ($_POST['part'] == '2') {
                 $part_table = 'coolers';
             } elseif ($_POST['part'] == '3') {
-                $part_table = 'motherbaords';
+                $part_table = 'motherboards';
             } elseif ($_POST['part'] == '4') {
                 $part_table = 'memories';
             } elseif ($_POST['part'] == '5') {

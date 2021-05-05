@@ -1,5 +1,5 @@
 <?php 
-    require 'config.php';
+    require 'config/config.php';
     $currentPage = 'confirmation';
     if ( isset($_POST['part']) && isset($_POST['part']) != ''
         && isset($_POST['part_id']) && isset($_POST['part_id']) != ''
@@ -30,7 +30,7 @@
                 } elseif ($_POST['part'] == '2') {
                     $part_table = 'coolers';
                 } elseif ($_POST['part'] == '3') {
-                    $part_table = 'motherbaords';
+                    $part_table = 'motherboards';
                 } elseif ($_POST['part'] == '4') {
                     $part_table = 'memories';
                 } elseif ($_POST['part'] == '5') {
@@ -56,7 +56,7 @@
                     } elseif ($_POST['original_part'] == '2') {
                         $original_part_table = 'coolers';
                     } elseif ($_POST['original_part'] == '3') {
-                        $original_part_table = 'motherbaords';
+                        $original_part_table = 'motherboards';
                     } elseif ($_POST['original_part'] == '4') {
                         $original_part_table = 'memories';
                     } elseif ($_POST['original_part'] == '5') {
@@ -130,7 +130,7 @@
                 } elseif ($_POST['part'] == '2') {
                     $part_table = 'coolers';
                 } elseif ($_POST['part'] == '3') {
-                    $part_table = 'motherbaords';
+                    $part_table = 'motherboards';
                 } elseif ($_POST['part'] == '4') {
                     $part_table = 'memories';
                 } elseif ($_POST['part'] == '5') {
@@ -157,7 +157,7 @@
                     } elseif ($_POST['original_part'] == '2') {
                         $original_part_table = 'coolers';
                     } elseif ($_POST['original_part'] == '3') {
-                        $original_part_table = 'motherbaords';
+                        $original_part_table = 'motherboards';
                     } elseif ($_POST['original_part'] == '4') {
                         $original_part_table = 'memories';
                     } elseif ($_POST['original_part'] == '5') {

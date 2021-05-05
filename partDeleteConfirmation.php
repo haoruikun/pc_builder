@@ -1,5 +1,5 @@
 <?php 
-    require 'config.php';
+    require 'config/config.php';
     $currentPage = 'confirmation';
     if (!isset($_SESSION['loggedIn']) ||  $_SESSION['loggedIn'] != true) {
         $error = "Please Log In to Make Any Edit."; 
@@ -20,7 +20,7 @@
         } elseif ($_GET['id'] == '2') {
             $part_table = 'coolers';
         } elseif ($_GET['id'] == '3') {
-            $part_table = 'motherbaords';
+            $part_table = 'motherboards';
         } elseif ($_GET['id'] == '4') {
             $part_table = 'memories';
         } elseif ($_GET['id'] == '5') {

@@ -1,5 +1,5 @@
 <?php 
-  require 'config.php';
+  require 'config/config.php';
   if (isset($_GET['id']) && $_GET['id'] != '') {
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     if ($mysqli->connect_errno) {
@@ -116,7 +116,7 @@
             } else {
                 echo $row['username'];
             }?></h5>
-        <?php if ($_SESSION['username'] == $row['username']) :?>
+        <?php if (isset($_SESSION['username']) && $_SESSION['username'] == $row['username']) :?>
             <div class="btn-group">
                 <a class="btn btn-outline-light" href="builder.php?edit=1&id=<?php echo $id;?>"><i class="fas fa-edit"></i> Edit</a>
                 <button form="delete" type="submit" class="btn btn-outline-light" onclick="return confirm('Are you sure to delete?')" ><i class="fas fa-trash-alt"></i> Delete</button>

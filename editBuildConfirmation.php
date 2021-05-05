@@ -1,7 +1,7 @@
 <?php 
-    require 'config.php';
+    require 'config/config.php';
     $currentPage = 'confirmation';
-    var_dump($_POST);
+    // var_dump($_POST);
 
     if ( isset($_POST['build_name']) && trim($_POST['build_name']) != ''
       && isset($_POST['build_id']) && trim($_POST['build_id']) != ''

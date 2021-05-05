@@ -55,7 +55,7 @@
         if (!$results_delete) {
             $pattern = "/^Cannot delete or update a parent row: a foreign key constraint fails/";
             if ( preg_match($pattern, $mysqli->error) == 1) {
-                $error = "You cannot delete a part that is already in a build. Please remvoe the part from the build first to delete.";
+                $error = "You can not delete a part that is already in a build. Please remove the part from the build first to delete.";
             } else {
                 echo $mysqli->error;
                 $mysqli->close();
